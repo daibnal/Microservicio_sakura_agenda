@@ -10,17 +10,26 @@ El microservicio de Agenda de Sakura permite gestionar las reservas de horas del
 
 ## Microservicios relacionados
 - Gateway
-- Personas / Usuarios
+- Personas (Usuarios)
 - Personal (Profesionales)
 - Catálogo (Servicios)
 - Configuración
 - Pago
+- Iventario
+- Reporte
 
 ## Rutas principales
-- **Crear reserva:** `POST: /api/sakura/v1/agenda/reserva`
-- **Listar reservas:** `GET: /api/sakura/v1/agenda/reserva`
-- **Gestionar bloqueos:** `POST / PUT / GET: /api/sakura/v1/agenda/bloqueo`
+- **Crear reserva:** `POST: /api/sakura/v1/agenda/reservas`
+- **Listar reservas:** `GET: /api/sakura/v1/agenda/reservas`
+- **Obtener reserva por ID: GET:** `/api/sakura/v1/agenda/reservas/{id}`
+- **Actualizar estado de reserva: PUT:** `/api/sakura/v1/agenda/reservas/{id}/estado`
+- **Crear bloqueo:** `/api/sakura/v1/agenda/bloqueos`
+- **Listar bloqueos: GET:** `/api/sakura/v1/agenda/bloqueos`
 
 ## Documentación Swagger
-- **Swagger UI:** http://localhost:8080/swagger-ui/index.html
-- **OpenAPI:** http://localhost:8080/v3/api-docs
+- **Swagger UI:** http://localhost:8084/swagger-ui/index.html
+- **OpenAPI:** http://localhost:8084/v3/api-docs
+
+## Ejecución mediante API Gateway
+Si el API Gateway se encuentra en ejecución, las solicitudes pueden realizarse mediante:
+http://localhost:9000/api/sakura/v1/agenda/reservas
