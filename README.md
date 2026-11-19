@@ -35,8 +35,9 @@ Si el API Gateway se encuentra en ejecución, las solicitudes pueden realizarse 
 http://localhost:9000/api/sakura/v1/agenda/reservas
 
 ## Ejemplos de Json
+
+"crear_reserva_request": 
 {
-"crear_reserva_request": {
 "clienteId": 104,
 "nombreCliente": "Valentina Araya",
 "telefonoCliente": "+56955667788",
@@ -50,6 +51,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "horaFin": "16:30:00",
 "observaciones": "Cliente prefiere curvatura natural."
 },
+
 "crear_reserva_response_201": {
 "id": 48,
 "codigoReserva": "SAK-20261125-048",
@@ -68,6 +70,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "observaciones": "Cliente prefiere curvatura natural.",
 "creadoEn": "2026-11-19T13:10:00Z"
 },
+
 "listar_reservas_response_200": [
 {
 "id": 48,
@@ -80,6 +83,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "horaFin": "16:30:00",
 "estado": "CONFIRMADA"
 },
+
 {
 "id": 49,
 "codigoReserva": "SAK-20261125-049",
@@ -92,6 +96,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "estado": "PENDIENTE"
 }
 ],
+
 "registrar_bloqueo_request": {
 "especialistaId": 2,
 "fecha": "2026-11-26",
@@ -109,6 +114,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "motivo": "Horario de colación",
 "activo": true
 },
+
 "error_conflicto_horario_409": {
 "timestamp": "2026-11-19T13:12:45Z",
 "status": 409,
@@ -116,6 +122,7 @@ http://localhost:9000/api/sakura/v1/agenda/reservas
 "message": "El bloque horario seleccionado (15:30 - 16:30) ya se encuentra ocupado para la especialista.",
 "path": "/api/sakura/v1/agenda/reservas"
 },
+
 "error_validacion_campos_400": {
 "timestamp": "2026-11-19T13:14:10Z",
 "status": 400,
